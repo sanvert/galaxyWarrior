@@ -1,49 +1,49 @@
-Galaxy Warrior is a CLI based adventure game.
+Galaxy Warrior is a CLI based adventure game.<br />
 
-To generate runnable jar artifact please run below maven command.
-Unit tests are run for each build.
+To generate runnable jar artifact please run below maven command.<br />
+Unit tests are run for each build.<br />
 
-- mvn clean install
+- mvn clean install<br />
 
-Game Manual
+Game Manual<br />
 
-   Meanings of signs on map
-        X - shows user character
-        W - shows enemies
-        / - blocked space
-        . - free space
+   Meanings of signs on map<br />
+        X - shows user character<br />
+        W - shows enemies<br />
+        / - blocked space<br />
+        . - free space<br />
         
-   Moving commands
-        w or W - Up
-        a or A - Left
-        s or S - Down
-        d or D - Right
-        save - saves current game
-        exit - to exit game
+   Moving commands<br />
+        w or W - Up<br />
+        a or A - Left<br />
+        s or S - Down<br />
+        d or D - Right<br />
+        save - saves current game<br />
+        exit - to exit game<br />
         
         
-   CLI View From Game
+   CLI View From Game<br />
    
    >s
    
-   / / / / / / / / / / / / / / / / / 
-   / . . . . . / . . . . . . . / . / 
-   / . . . . . . . . . . . / . . / / 
-   / . . . . / . . . . . . . . . . / 
-   / . . . . . . . . . . . . . . . / 
-   / . . . / . . / . . . . . . / . / 
-   / / / . . . / / . . . . . . . . / 
-   / . / . / . / / . / . . . / . . / 
-   / . / / . X W . . . . . . . . . / 
-   / . . . . . / / . . / . / . . . / 
-   / . . . . . . . . / . . / / / . / 
-   / . / / . . . . . . / . . . / W / 
-   / . . . . . . . . . . / . . . . / 
-   / . . . . . . . . / . . . . / . / 
-   / . . . / . / . . / W . . . . . / 
-   / . . . . . . W / . . . . / . . / 
-   / / / / / / / / / / / / / / / / / 
+   / / / / / / / / / / / / / / / / /<br />
+   / . . . . . / . . . . . . . / . /<br />
+   / . . . . . . . . . . . / . . / /<br />
+   / . . . . / . . . . . . . . . . /<br />
+   / . . . . . . . . . . . . . . . /<br /> 
+   / . . . / . . / . . . . . . / . / <br />
+   / / / . . . / / . . . . . . . . / <br />
+   / . / . / . / / . / . . . / . . / <br />
+   / . / / . X W . . . . . . . . . / <br />
+   / . . . . . / / . . / . / . . . / <br />
+   / . . . . . . . . / . . / / / . / <br />
+   / . / / . . . . . . / . . . / W / <br />
+   / . . . . . . . . . . / . . . . / <br />
+   / . . . . . . . . / . . . . / . / <br />
+   / . . . / . / . . / W . . . . . / <br />
+   / . . . . . . W / . . . . / . . / <br />
+   / / / / / / / / / / / / / / / / / <br />
    
-   Right side a warrior is located
-   	Laser Shooter54 the Laser Shooter
+   Right side a warrior is located<br />
+   	Laser Shooter54 the Laser Shooter<br />
    	Life:125
