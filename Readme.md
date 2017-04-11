@@ -5,6 +5,8 @@ Unit tests are run for each build.<br />
 
 - mvn clean install<br />
 
+- game.App is the main class.<br />
+
 Game Manual<br />
 
    Meanings of signs on map<br />
