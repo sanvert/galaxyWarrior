@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * Created by sanver.
  */
-public class WarriorRepository extends FileRepository<Warrior> {
+public final class WarriorRepository extends FileRepository<Warrior> {
     private static WarriorRepository warriorRepository;
     private Set<Warrior> warriorSet = new HashSet<>();
 

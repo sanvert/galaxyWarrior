@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * Created by sanver.
  */
-public class GameSessionRepository extends FileRepository<GameSession> {
+public final class GameSessionRepository extends FileRepository<GameSession> {
     private static GameSessionRepository gameSessionRepository;
     private static Set<GameSession> sessionSet;
 

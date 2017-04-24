@@ -2,7 +2,9 @@ package game.repository;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by sanver.
@@ -45,5 +47,17 @@ public class FileRepository<T extends Serializable> implements Repository<T>  {
         } catch (ClassNotFoundException | IOException e) {
         }
         return list;
+    }
+
+    protected Set<T> fetchAllIntoSet() {
+        Set<T> set = new HashSet<T>();
+        try(ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName));) {
+            Object obj;
+            while((obj = inputStream.readObject()) != null) {
+                set.add((T) obj);
+            }
+        } catch (ClassNotFoundException | IOException e) {
+        }
+        return set;
     }
 }
