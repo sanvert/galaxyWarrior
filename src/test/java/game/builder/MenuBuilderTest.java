@@ -41,12 +41,13 @@ public class MenuBuilderTest {
     @Test
     public void menuShouldObtainCharacterCreationInteraction() {
         builder.addCharacterCreationSubInteraction();
+        builder.addExitSubInteraction();
         MenuInteraction interaction = builder.build();
-        doReturn("1").doReturn("0").when(mediator).readInput();
+        doReturn("1").doReturn("2").when(mediator).readInput();
         interaction.interact(Optional.empty(), mediator);
         ArgumentCaptor<String> outputCaptor = ArgumentCaptor.forClass(String.class);
 
-        verify(mediator, times(5)).writeOutput(outputCaptor.capture());
+        verify(mediator, times(8)).writeOutput(outputCaptor.capture());
 
         assertEquals(outputCaptor.getAllValues().get(1), CharacterUtil.SELECT_WARRIOR_TYPE_TEXT);
     }

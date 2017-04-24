@@ -15,7 +15,6 @@ public class MenuBuilder {
     public void addCharacterCreationSubInteraction() {
         CharacterCreationInteraction characterCreation = new CharacterCreationInteraction();
         this.interaction.addOption(characterCreation);
-        characterCreation.setOptionalPreviousInteraction(this.interaction);
         characterCreation.setOptionalNextInteraction(this.interaction);
     }
 
@@ -30,11 +29,9 @@ public class MenuBuilder {
 
         CharacterSelectionInteraction characterSelectionInteraction = new CharacterSelectionInteraction();
         characterSelectionInteraction.setOptionalNextInteraction(gamePlayInteraction);
-        characterSelectionInteraction.setOptionalPreviousInteraction(this.interaction);
 
         NewGameCreationInteraction newGameCreationInteraction = new NewGameCreationInteraction();
         newGameCreationInteraction.setOptionalNextInteraction(characterSelectionInteraction);
-        newGameCreationInteraction.setOptionalPreviousInteraction(this.interaction);
 
         this.interaction.addOption(newGameCreationInteraction);
     }
@@ -44,7 +41,6 @@ public class MenuBuilder {
         gamePlayInteraction.setOptionalNextInteraction(this.interaction);
 
         GameSelectionInteraction selectionInteraction = new GameSelectionInteraction();
-        selectionInteraction.setOptionalPreviousInteraction(this.interaction);
         selectionInteraction.setOptionalNextInteraction(gamePlayInteraction);
 
         this.interaction.addOption(selectionInteraction);

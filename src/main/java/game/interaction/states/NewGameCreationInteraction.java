@@ -25,7 +25,6 @@ public class NewGameCreationInteraction extends ConnectedNode implements Interac
 
         if(selectedMapTypeId == Integer.MIN_VALUE) {
             mediator.writeOutput(INVALID_SELECTION);
-            this.previousInteraction.ifPresent(previous -> previous.interact(Optional.empty(), mediator));
         } else {
             MapType selectedType = MapType.values()[selectedMapTypeId];
             mediator.writeOutput(GameUtil.SPECIFY_MAP_NAME_TEXT);
@@ -44,5 +43,10 @@ public class NewGameCreationInteraction extends ConnectedNode implements Interac
     @Override
     public String getHeader() {
         return CREATE_NEW_MAP;
+    }
+
+    @Override
+    public boolean isFinalizerInteraction() {
+        return false;
     }
 }

@@ -27,7 +27,6 @@ public class CharacterCreationInteraction extends ConnectedNode implements Inter
 
         if(selectionIndex == Integer.MIN_VALUE) {
             mediator.writeOutput(INVALID_SELECTION);
-            this.previousInteraction.ifPresent(previous -> previous.interact(Optional.empty(), mediator));
         } else {
             mediator.writeOutput(SPECIFY_WARRIOR_NAME_TEXT);
             String warriorName = mediator.readInput();
@@ -43,6 +42,11 @@ public class CharacterCreationInteraction extends ConnectedNode implements Inter
     @Override
     public String getHeader() {
         return CREATE_NEW_CHARACTER_HEADER;
+    }
+
+    @Override
+    public boolean isFinalizerInteraction() {
+        return false;
     }
 
 }

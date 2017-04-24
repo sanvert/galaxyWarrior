@@ -28,7 +28,6 @@ public class CharacterSelectionInteraction extends ConnectedNode implements Inte
         List<Warrior> warriorList = WarriorRepository.getInstance().fetchAllWarriors();
         if(warriorList.isEmpty()) {
             mediator.writeOutput(THERE_IS_NO_WARRIOR);
-            previousInteraction.ifPresent(previous -> previous.interact(Optional.empty(), mediator));
             return;
         }
 
@@ -39,7 +38,6 @@ public class CharacterSelectionInteraction extends ConnectedNode implements Inte
         int selectionId = GameUtil.convertAndValidateSelectionInput(warriorList.size(), selection);
         if(selectionId == Integer.MIN_VALUE) {
             mediator.writeOutput(INVALID_SELECTION);
-            previousInteraction.ifPresent(previous -> previous.interact(Optional.empty(), mediator));
         } else {
             Warrior selected = warriorList.get(selectionId);
             Coordinates c = GameUtil.getCoordinatesToPutWarrior(createdGameMap);
@@ -53,6 +51,11 @@ public class CharacterSelectionInteraction extends ConnectedNode implements Inte
     @Override
     public String getHeader() {
         return SELECT_CHARACTER_HEADER;
+    }
+
+    @Override
+    public boolean isFinalizerInteraction() {
+        return false;
     }
 
 }

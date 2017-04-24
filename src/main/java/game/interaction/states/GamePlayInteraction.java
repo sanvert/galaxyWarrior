@@ -59,4 +59,9 @@ public class GamePlayInteraction extends ConnectedNode implements Interaction {
     public String getHeader() {
         return PLAY_GAME_HAVE_FUN;
     }
+
+    @Override
+    public boolean isFinalizerInteraction() {
+        return false;
+    }
 }

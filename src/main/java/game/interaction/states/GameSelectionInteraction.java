@@ -24,7 +24,6 @@ public class GameSelectionInteraction extends ConnectedNode implements Interacti
         List<GameSession> gameList = GameSessionRepository.getInstance().fetchAllGames();
         if(gameList.isEmpty()) {
             mediator.writeOutput(NO_SAVED_GAME);
-            previousInteraction.ifPresent(previous -> previous.interact(Optional.empty(), mediator));
             return;
         }
 
@@ -34,17 +33,20 @@ public class GameSelectionInteraction extends ConnectedNode implements Interacti
         int selectionId = GameUtil.convertAndValidateSelectionInput(gameList.size(), selection);
         if(selectionId == Integer.MIN_VALUE) {
             mediator.writeOutput(INVALID_SELECTION);
-            previousInteraction.ifPresent(previous -> previous.interact(Optional.empty(), mediator));
         } else {
             GameSession selected = gameList.get(selectionId);
             nextInteraction.ifPresent(next -> next.interact(of(selected), mediator));
         }
-
     }
 
     @Override
     public String getHeader() {
         return SELECT_SAVED_GAME;
+    }
+
+    @Override
+    public boolean isFinalizerInteraction() {
+        return false;
     }
 
 }

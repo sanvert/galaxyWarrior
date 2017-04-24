@@ -22,4 +22,9 @@ public class EndingInteraction implements Interaction {
         return EXIT;
     }
 
+    @Override
+    public boolean isFinalizerInteraction() {
+        return true;
+    }
+
 }
