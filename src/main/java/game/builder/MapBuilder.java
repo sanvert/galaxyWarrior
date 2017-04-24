@@ -1,13 +1,12 @@
 package game.builder;
 
-import game.factory.WarriorFactory;
+import game.model.character.WarriorFactory;
 import game.model.character.Warrior;
 import game.model.character.WarriorType;
 import game.model.game.GameMap;
 import game.model.game.MapNode;
 import game.model.game.MapNodeType;
 
-import java.util.Optional;
 import java.util.Random;
 
 /**

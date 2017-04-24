@@ -1,7 +1,7 @@
 package game.util;
 
 import game.builder.MapBuilder;
-import game.factory.WarriorFactory;
+import game.model.character.WarriorFactory;
 import game.model.character.Warrior;
 import game.model.character.WarriorType;
 import game.model.game.Coordinates;

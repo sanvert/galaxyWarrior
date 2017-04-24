@@ -13,8 +13,8 @@ public class App
 {
 
     public static void main( String[] args ) {
-        System.out.println( "Welcome to the Galaxy Warriors Game!" );
         InteractionMediator mediator = new CLIInteraction(System.in, System.out);
+        mediator.writeOutput("Welcome to the Galaxy Warriors Game!" );
 
         Bootstrapper bootstrapper = new Bootstrapper();
         bootstrapper.startUserInteraction(mediator);

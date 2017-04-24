@@ -2,7 +2,7 @@ package game.interaction.states;
 
 import game.model.weapon.LaserGun;
 import game.util.GameUtil;
-import game.factory.WarriorFactory;
+import game.model.character.WarriorFactory;
 import game.interaction.process.InteractionMediator;
 import game.model.character.Warrior;
 import game.model.character.WarriorType;

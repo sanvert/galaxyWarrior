@@ -1,6 +1,5 @@
 package game.model.character;
 
-import game.factory.WarriorFactory;
 import game.model.weapon.LaserGun;
 import game.model.weapon.LaserRifle;
 import game.model.weapon.Weapon;

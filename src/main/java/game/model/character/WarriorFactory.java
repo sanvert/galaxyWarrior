@@ -1,4 +1,4 @@
-package game.factory;
+package game.model.character;
 
 import game.model.character.*;
 import game.model.weapon.Bomb;
